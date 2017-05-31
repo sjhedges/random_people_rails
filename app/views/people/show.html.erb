@@ -1,0 +1,25 @@
+<h1>
+  <%= @person.name %>
+</h1>
+<hr />
+
+<blockquote>
+  <p>Name:&emsp;<%= @person.name %></p>
+  <br />
+  <p>Age:&emsp;<%= @person.age %></p>
+  <br />
+  <p>Hair Color:&emsp;<%=  @person.hair_color %></p>
+  <br />
+  <p>Eye Color:&emsp;<%=  @person.eye_color %></p>
+  <br />
+  <p>Gender:&emsp;<%=  @person.gender %></p>
+  <br />
+  <p>Alive?&emsp;<%= @person.alive %></p>
+</blockquote>
+
+<i>
+  Posted At: <%= @person.created_at %>
+</i>
+
+<br />
+<%= link_to 'All People', people_path %>

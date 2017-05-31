@@ -1,0 +1,26 @@
+<center><h1>List of People</h1></center>
+<hr />
+
+<center><%= link_to 'Create New Person', new_person_path %></center>
+
+<% if @people.empty? %>
+  <center><h2>No People Found, Please Create A Human!</h2></center>
+  <% else %>
+
+<ul>
+  <% @people.each do |person| %>
+      <li>
+        <%= link_to person.name, person_path(person)%>
+        <span> - </span>
+        <%= link_to 'Edit', edit_person_path(person) %>
+        <span> - </span>
+        <%= link_to 'Delete', person_path(person), method: :delete %>
+        <div>
+          <p></p>
+          <br />
+          <p></p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  <% end %>
